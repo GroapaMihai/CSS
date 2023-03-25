@@ -1,0 +1,80 @@
+// CSS 1 - 1996
+// CSS 2 - 1998
+// CSS 3 - In development
+
+// pick browser default font
+font-family: sans-serif;
+
+// Universal Selector - apply style to all elements
+* {
+	color: red;
+}
+
+// Elements Selector
+h1 {
+	color: red;
+}
+
+// Class Selector
+.blog-post {
+	color: red;
+}
+
+// Id Selector
+#main-title {
+	color: red;
+}
+
+// Attribute Selector
+<button disabled>...</button>
+
+[disabled] {
+	color: red;
+}
+
+	// Combinators
+
+// 1. Adjacent Sibling Combinator (+)
+// applies the style to paragraphs that directly follow a h2 tag 
+<div>
+	<h2>Not applied</h2>
+	<p>CSS applied</p>
+</div>
+
+h2 + p {
+	color: red;
+}
+
+// 2. General Sibling Combinator (~)
+// applies the style to paragraphs that follow a h2 tag (not necessarly directly, but on the same level)
+<div>
+	<h2>Not applied</h2>
+	<h3>Not applied</h3>
+	<p>CSS applied</p>
+</div>
+
+h2 + p {
+	color: red;
+}
+
+// 3. Child Sibling Combinator (>)
+// apply the style to all paragraphs that are direct childs of a div tag
+<div>
+	<p>CSS applied>
+	<h2>Not applied</h2>
+	<article>
+		<p>Not applied>
+	</article>
+</div>
+
+div > p {
+	color: red;
+}
+
+// 4. Descendant Combinator
+// apply this style to h1 elements nested in an element with id = product-overview
+// the h1 does not have to be a direct child for style to apply!
+#product-overview h1 {
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
