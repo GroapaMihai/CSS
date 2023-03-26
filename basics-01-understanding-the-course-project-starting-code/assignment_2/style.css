@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+}
+
+.box {
+	background: purple;
+	color: orange;
+	padding: 15px 10px;
+	border: 5px solid black;
+	font-family: 'Anton', sans-serif;
+	font-size: 22px;
+	margin: 20px 5px;
+	display: inline-block;
+}
+
+.box:first-child {
+	height: 300px;
+	width: 50%;
+	visibility: hidden;
+}
+
+div:last-of-type:hover {
+	background: orange;
+	color: purple;
+}

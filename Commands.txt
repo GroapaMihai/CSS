@@ -78,3 +78,42 @@ div > p {
     color: white;
     font-family: 'Anton', sans-serif;
 }
+
+	// Shorthand properties
+// Combine values of multiple properties in a single property
+	border-width: 2px;
+	border-style: dashed;
+	border-color: orange;
+// might be written as:
+	border: 2px dashed orange;
+// Order does not matter in this case.
+
+// margin shorthand property
+	margin: top right bottom left;
+margin: 5px 10px 5px 10px;
+	margin: top&bottom left&right;
+margin: 5px 10px;
+	margin: all_sides;
+margin: 5px;
+
+	// Box-sizing model
+// By default, box-sizing property has a value of content-box.
+// This means that when we specify a width and height for an element, the value is applied to content only, without taking into account padding and border sizes.
+// The better approach is to use box-sizing: border-box.
+// By doing this, the width and height will be equal to content + padding + border width/height (those values will be included in the computation of width and height).
+
+display: block;
+// element will take the whole width of the row, it will be the entire line.
+// Ex: <div>, <section>, <article>, <nav>, <h1>, <h2>, <p>.
+diplay: inline;
+// element will take width as their content needs, it will be a part of a line. For inline elements it is not possible to set top and bottom paddings/margins!
+// Additionally, setting a width or height on an inline element also has no effect. The width and height is auto to take as much space as required by the content.
+// Ex: <a>, <span>, <img>.
+display: inline-block;
+// element will take width as their content needs, but now you have the capability to set top and bottom paddings/margins.
+
+width: calc(100% - 55px);
+
+	// Pseudo Classes and Elements
+// Pseudo Class -    :class_name (define the style of a special state of an element)
+// Pseudo Element - ::element_name (define the style of a specific part of an element)
