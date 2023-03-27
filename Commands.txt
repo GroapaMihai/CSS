@@ -117,3 +117,5 @@ width: calc(100% - 55px);
 	// Pseudo Classes and Elements
 // Pseudo Class -    :class_name (define the style of a special state of an element)
 // Pseudo Element - ::element_name (define the style of a specific part of an element)
+
+// !important - overwirtes specifity and all other selectors
