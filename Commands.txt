@@ -119,3 +119,22 @@ width: calc(100% - 55px);
 // Pseudo Element - ::element_name (define the style of a specific part of an element)
 
 // !important - overwirtes specifity and all other selectors
+
+	// Positioning
+// position: static - is the default value
+// With position: static we can't apply positioning using top, bottom etc or specify the z-index.
+
+// postion: fixed - the element is taken out of the document flow, it no longer exists to other elements, so you might have overlapping elements with the fixed one.
+// The positioning context of such elements is always the viewport.
+
+// z-index - default value is auto (equal to 0).
+
+// position: absolute - the positioning context depends on the closest ancestor with a positioning attribute.
+// If you don't have any nacestors with position applied, then the positioning context is the html element.
+// Otherwise, the element will be positioned in relation with the closest ancestor which has such a position property applied.
+
+// position: relative - the positioning context is the element itself
+
+// overflow: hidden - it will hide the element once it's outside of parent
+
+// position: sticky - it's a combination of relative and fixed
