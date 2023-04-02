@@ -138,3 +138,16 @@ width: calc(100% - 55px);
 // overflow: hidden - it will hide the element once it's outside of parent
 
 // position: sticky - it's a combination of relative and fixed
+
+	// Images
+// Image won't be repeated if one image won't cover the available space
+background-repeat: no-repeat;
+
+// Image will take the available container. It ensures no whitespace is in the container.
+background-size: cover;
+
+// linear gradient starting as red, ending as blue, diagonally from left bottom to top right
+linear-gradient(to top right, red, blue);
+
+// grey filter applied to our image
+filter: grayscale(40%);
