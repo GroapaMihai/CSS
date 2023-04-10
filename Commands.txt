@@ -130,7 +130,7 @@ width: calc(100% - 55px);
 // z-index - default value is auto (equal to 0).
 
 // position: absolute - the positioning context depends on the closest ancestor with a positioning attribute.
-// If you don't have any nacestors with position applied, then the positioning context is the html element.
+// If you don't have any ancestors with position applied, then the positioning context is the html element.
 // Otherwise, the element will be positioned in relation with the closest ancestor which has such a position property applied.
 
 // position: relative - the positioning context is the element itself
@@ -151,3 +151,8 @@ linear-gradient(to top right, red, blue);
 
 // grey filter applied to our image
 filter: grayscale(40%);
+
+	// REM font size
+// It is useful when you want your font to dinamically grow/shrink depending on user settings of the browser.
+// It uses a multiplier to compute the font size applied to an element.
+// Ex: font-size: 2rem; - Font size will be 2 x default font size, depending on user settings.
