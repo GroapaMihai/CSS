@@ -156,3 +156,9 @@ filter: grayscale(40%);
 // It is useful when you want your font to dinamically grow/shrink depending on user settings of the browser.
 // It uses a multiplier to compute the font size applied to an element.
 // Ex: font-size: 2rem; - Font size will be 2 x default font size, depending on user settings.
+
+	// Media queries
+// Change design depending on viewport size.
+// Media queries should be added in ascending order: Ex: @media(min-width: 40rem) first, then @media(min-wdith: 60rem).
+
+// Logical operators can be used too: Ex: @media (min-width: 40rem) and (orientation: landscape).

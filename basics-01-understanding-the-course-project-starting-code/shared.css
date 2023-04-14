@@ -11,6 +11,11 @@ body::-webkit-scrollbar {
     width: 0
 }
 
+main {
+    min-height: calc(100vh - 3.5rem - 8rem);
+    margin-top: 3.5rem;
+}
+
 .backdrop {
     display: none;
     position: fixed;
@@ -61,19 +66,17 @@ body::-webkit-scrollbar {
     color: #0E4F1F;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.375rem;
+    height: 2.5rem;
     vertical-align: middle;
+    display: inline-block;
 }
 
 .main-header__brand > img {
-    height: 1.375rem;
+    height: 100%;
 }
 
 .main-nav {
-    display: inline-block;
-    width: calc(100% - 122px);
-    text-align: right;
-    vertical-align: middle;
+    display: none;
 }
 
 .main-nav__items {
@@ -146,6 +149,19 @@ body::-webkit-scrollbar {
   font-size: 1.5rem;
 }
 
+@media(min-width: 40rem) {
+    .toggle-button {
+        display: none;
+    }
+
+    .main-nav {
+        display: inline-block;
+        width: calc(100% - 64px);
+        text-align: right;
+        vertical-align: middle;
+    }
+}
+
 .main-footer {
     background: black;
     padding: 2rem;
@@ -160,8 +176,8 @@ body::-webkit-scrollbar {
 }
 
 .main-feature__link {
-    display: inline-block;
-    margin: 0 1rem;
+    display: block;
+    margin: 1rem 0;
 }
 
 .main-feature__link > a {
@@ -172,6 +188,13 @@ body::-webkit-scrollbar {
 .main-footer a:active,
 .main-footer a:hover {
     color: #CCC;
+}
+
+@media(min-width: 40rem) {
+    .main-feature__link {
+        display: inline-block;
+        margin: 0 1rem;
+    }
 }
 
 .toggle-button {
