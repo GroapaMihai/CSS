@@ -162,3 +162,47 @@ filter: grayscale(40%);
 // Media queries should be added in ascending order: Ex: @media(min-width: 40rem) first, then @media(min-wdith: 60rem).
 
 // Logical operators can be used too: Ex: @media (min-width: 40rem) and (orientation: landscape).
+
+	// Advanced attribute selectors
+// Element with attribute (ex: <input type="text">)
+[type] {
+	color: red;
+}
+
+// Element with specific attribute value (ex: <input type="email">)
+[type="email"] {
+	color: red;	
+}
+
+// Element with specific attribute value in a list (ex: <p lang="en-us en-gb">Hi!</p>)
+[lang~="en-us"] {
+	color: red;
+}
+
+// Element with specific attribute value/value- (ex: <p lang="en-us">Hi!</p>)
+[lang|="en"] { // will match "en" or "en-" as a prefix, followed by something. Beware of the dash, it has to immediately follow the prefix!
+	color: red;
+}
+
+// Element with specific attribute value prefix (ex: <a href="#all">Link</a>)
+[href^="#"] {
+	color: red;
+}
+
+// Element with specific attribute value suffix (ex: <a href="ab.de">Link</a>)
+[href$=".de"] {
+	color: red;
+}
+
+// Element with specific attribute value contains (ex: <img src="i.cdn.com">)
+[src*="cdn"] {
+	color: red;
+}
+
+// Element with specific attribute value contains insensitively (ex: <img src="i.CDN.com">)
+[src*="cdn" i] {
+	color: red;
+}
+
+// Elements that are inputs but not checkboxes
+.signup-form input:not([type="checkbox"])

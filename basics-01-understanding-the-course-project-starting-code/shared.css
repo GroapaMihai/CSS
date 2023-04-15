@@ -222,3 +222,10 @@ main {
 .open {
     display: block !important;
 }
+
+.button[disabled] {
+    cursor: not-allowed;
+    border: #A1A1A1;
+    background: #CCC;
+    color: #A1A1A1;
+}
