@@ -206,3 +206,17 @@ filter: grayscale(40%);
 
 // Elements that are inputs but not checkboxes
 .signup-form input:not([type="checkbox"])
+
+	// Fonts
+font-family: 'Anton', sans-serif;
+// The syntax above means the browser will try to apply 'Anton' font family, and if not possible sans-serif as a fallback.
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+// This will import the Montserrat font family with the regular/400 and in addition the 700 font-face/font-weight (bold).
+// Most of the font families have different font-faces applied. You have to import each of these font-faces if you want to use them (to change the font weight).
+
+// Importing font from local .ttf file
+@font-face {
+	font-family: 'Anonymous_Pro';
+	src: url('Anonymous_Pro/AnonymousPro-Regular.ttf');
+}
