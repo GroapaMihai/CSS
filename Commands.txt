@@ -220,3 +220,37 @@ font-family: 'Anton', sans-serif;
 	font-family: 'Anonymous_Pro';
 	src: url('Anonymous_Pro/AnonymousPro-Regular.ttf');
 }
+
+	// Flexbox
+// Turning an element into a 'flex container'.
+display: flex;
+
+// The children of this element are called 'flex items'.
+
+// Move the elements to a new row when they won't fit in the flex container while downsizing it (used in conjuction with flex-direction: row).
+flex-wrap: wrap;
+
+// Shorthand for flex-direction: row; flex-wrap: wrap;
+flex-flow: row wrap;
+
+// align-items - Aligns items across the cross axis.
+// Default values is - align-items: stretch;
+
+// justify-content - Aligns items across the main axis.
+
+// Working on individual flex items (those properties apply on individual flex items, not the container!)
+// Order: allows us to change the order of flex items by adding numbers. We simply say that the bigger number we apply to the element, the later it will be positioned.
+// Default value of order property - order: 0;
+
+// align-self - aligns individual item on the cross axis.
+
+// flex-grow - Used to specify the 'grow' behaviour of an element when the screen gets wider (distribution of white space across multiple elements).
+// Ex: elem1 has flex-grow: 1, elem2 has flex-grow: 3 and the screen increases by 400px.
+// Therefore elem1 will grow by 100px in width, and elem2 by 300px.
+// Default value of this property is flex-grow: 0 (no growth);
+
+// flex-shrink - works in a similar way when the screen gets narrower.
+// Default value of this property is flex-shrink: 1 (shrink by a scale factor of 1);
+
+// flex-basis: 350px; - Used to specify size in main-axis direction.
+If width is also specified, flex-basis will be picked. Similar for flex-direction: column and height;
