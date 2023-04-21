@@ -254,3 +254,77 @@ flex-flow: row wrap;
 
 // flex-basis: 350px; - Used to specify size in main-axis direction.
 If width is also specified, flex-basis will be picked. Similar for flex-direction: column and height;
+
+    // Grid
+// To create a grid container - display: grid;
+
+grid-template-columns: 200px 2fr 20% 1fr;
+// this way we specify the 4 columns props.
+
+grid-template-rows: 5rem 2.5rem;
+// this way we specify the 2 rows props.
+
+// At element(cell) level, you can use the following properties (examples):
+grid-column-start: 3;
+grid-column-end: 5;
+grid-row-start: 1;
+grid-row-end: 3;
+
+// We can use a helper function to specify min and max values of a row's height:
+grid-template-rows: 5rem minmax(10px, 200px)
+
+// Occupy 2 columns
+grid-column-end: span 2;
+
+// Important: grid cells might overlap
+
+// Shorthand notations
+grid-column: 1 / -1;           replaces grid-column-start and grid-column-end
+grid-row: 2 / span 1;          replaces grid-row-start and grid-row-end
+grid-area: 3 / 2 / 3 / span 3; replaces grid-row-start, grid-column-start, grid-row-end, grid-column-end
+
+// Gap between columns/rows
+grid-row-gap: 10px;
+grid-column-gap: 10px;
+grid-gap: 10px 0; replaces grid-row-gap, grid-column-gap
+
+// Adding labels to different areas (our grid is 3x4)
+grid-template-areas: "header header header header"
+                     ". . main main"
+                     "footer footer footer footer";
+
+// Then you can position your elements inside a certain area
+.el4 {
+	grid-area: main;
+}
+
+// clamps a given size to an available size according to the formula min(maximum size, max(minimum size, argument)).
+fit-content(8rem);
+
+// You can specify on the grid container how the individual cells should behave. Default is 'stretch' for both properties.
+justify-items: center;
+align-items: center;
+
+// To position the entire grid in the container area:
+justify-content: center;  // X axis
+align-content: center;   //  Y axis
+
+// To position an element individually:
+justify-self: center;  // X axis
+align-self: center;   //  Y axis
+
+// Allows you to style automatically generated rows (grid-auto-flow: row;)
+grid-auto-rows: 12rem;
+
+// Allows you to specify the behaviour to apply for container's elements
+grid-auto-flow: row;
+
+// Allows you to style automatically generated columns (grid-auto-flow: column;)
+grid-auto-columns: 10rem;
+
+// auto-fill: will automatically move columns into a new row when the screen width won't fit them;
+// Also, will add them next to each other when the row width fits the content (responsive screen)
+grid-template-columns: repeat(auto-fill, 15rem);
+
+// auto-fit: works almost the same as auto-fill, but it will center the elements when you don't have enough to fit the entire width.
+grid-template-columns: repeat(auto-fit, 15rem);
