@@ -328,3 +328,17 @@ grid-template-columns: repeat(auto-fill, 15rem);
 
 // auto-fit: works almost the same as auto-fill, but it will center the elements when you don't have enough to fit the entire width.
 grid-template-columns: repeat(auto-fit, 15rem);
+
+	// Transforming elements
+
+// Specify origin of transformation (center is default)
+transform-origin: center;
+
+// apply 45 degrees rotation
+transform: rotateZ(45deg);
+
+// rotation followed by 2 translations
+transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+
+// skew and scale with a factor of 1.4
+transform: skew(-20deg) scale(1.4);
