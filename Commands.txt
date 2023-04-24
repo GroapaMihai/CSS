@@ -342,3 +342,32 @@ transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
 
 // skew and scale with a factor of 1.4
 transform: skew(-20deg) scale(1.4);
+
+	// Transitions and animations
+
+// Usage
+transition: WHAT DURATION DELAY TIMING-FUNCTION;
+
+// Example
+transition: opacity 200ms 1s ease-out;
+
+// CSS will automatically interpolate from the old value to the new one.
+// For example, we watch for opacity changes. It will gradually go from opacity 0 (invisible) to 1 (fully-visible) in the course of 0.5 second.
+transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+// Usage
+animation: NAME DURATION DELAY TIMING-FUNCTION ITERATION DIRECTION FILL-MODE PLAY-STATE;
+
+// Example
+animation: wiggle 200ms 1s ease-out 8 alternate forwards running;
+
+// The wiggle animation is defined in the following way:
+@keyframes wiggle {
+    from {
+        transform: rotateZ(0);
+    }
+
+    to {
+        transform: rotateZ(10deg);
+    }
+}

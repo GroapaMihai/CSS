@@ -36,6 +36,7 @@ main {
 .package:active {
 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	border-color: #FF5454;
+	animation: jump 0.5s ease-out forwards;
 }
 
 .package > a {
@@ -127,5 +128,15 @@ main {
 	#free:active,
 	#free:hover {
 		border-right-color: #FF5454;
+	}
+}
+
+@keyframes jump {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-20px);
 	}
 }
